@@ -15,9 +15,20 @@ TestPassword is a benchmarking tool that measures the throughput and latency of 
 ## Prerequisites
 
 - Python 3.x
-- Cython
 - A C compiler (e.g., MSVC, GCC, Clang)
-- PyInstaller (optional, for creating a standalone executable)
+
+## Environment Setup
+
+Install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+The primary dependencies are:
+
+- **Cython**: Used for compiling the performance-critical core.
+- **PyInstaller**: Used for packaging the application into a standalone executable.
 
 ## Installation and Build
 
