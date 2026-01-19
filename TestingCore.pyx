@@ -9,19 +9,19 @@ from libc.stdio cimport printf
 def run_computation_core(str target_identity):
     cdef bytes target_bytes = target_identity.encode('utf-8')
     cdef char* target_c = target_bytes
-    cdef int seq_len = len(target_bytes)
-    cdef int last_idx = seq_len - 1
+    cdef Py_ssize_t seq_len = len(target_bytes)
+    cdef Py_ssize_t last_idx = seq_len - 1
 
     cdef char* sequence_pool = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_+=~`[]{}|;:,.<>?/"
-    cdef int pool_size = strlen(sequence_pool)
+    cdef Py_ssize_t pool_size = strlen(sequence_pool)
 
     cdef long long total_cycles = 0
     cdef int is_resolved = 0
-    cdef int i
+    cdef Py_ssize_t i
     cdef int keep_running = 1
     cdef int monitor_counter = 1000000000
 
-    cdef int* indices = <int*>malloc(seq_len * sizeof(int))
+    cdef Py_ssize_t* indices = <Py_ssize_t*>malloc(seq_len * sizeof(Py_ssize_t))
     cdef char* current_candidate = <char*>malloc((seq_len + 1) * sizeof(char))
 
     if not indices or not current_candidate:
