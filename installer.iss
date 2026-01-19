@@ -16,7 +16,7 @@ Source: "dist\TestPassword.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\TestPassword"; Filename: "{app}\TestPassword.exe"
-Name: "{commondesktop}\TestPassword"; Filename: "{app}\TestPassword.exe"
+Name: "{userdesktop}\TestPassword"; Filename: "{app}\TestPassword.exe"
 
 [Run]
 Filename: "{app}\TestPassword.exe"; Description: "Launch TestPassword"; Flags: postinstall nowait
