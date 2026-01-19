@@ -16,7 +16,17 @@ pyinstaller --icon="icon.ico" ^
     TestPassword.py
 
 if %errorlevel% equ 0 (
-    echo [Success] Done.
+    echo [Success] PyInstaller Done.
+    
+    echo [Info] Starting Inno Setup compilation...
+    "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+    
+    if %errorlevel% equ 0 (
+        echo [Success] Installer created successfully.
+    ) else (
+        echo [Fail] Inno Setup compilation failed.
+    )
+    
 ) else (
     echo [Fail] PyInstaller failed.
 )
