@@ -1,0 +1,54 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# === Cython Generated ===
+# Specifically ignore generated C and HTML files from Cython
+TestingCore.c
+TestingCore.html
+
+# === PyInstaller ===
+# Usually .spec files are kept if they are customized, but can be ignored if generated
+# *.spec
+*.manifest
+
+# === Environments ===
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === Project Specific ===
+# Add any specialized logs or temporary files here
+*.log
