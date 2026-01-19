@@ -7,7 +7,7 @@ UninstallDisplayIcon={app}\TestPassword.exe
 Compression=lzma2
 SolidCompression=yes
 OutputDir=.
-OutputBaseFilename=TestPassword_Setup
+OutputBaseFilename=TestPassword-Setup
 SetupIconFile=icon.ico
 PrivilegesRequired=admin
 

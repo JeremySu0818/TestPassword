@@ -16,6 +16,7 @@ TestPassword is a benchmarking tool that measures the throughput and latency of 
 
 - Python 3.x
 - A C compiler (e.g., MSVC, GCC, Clang)
+- Inno Setup (for creating the Windows installer)
 
 ## Environment Setup
 
@@ -47,6 +48,12 @@ Use the provided batch script to automate the build process and package the appl
 ```cmd
 build.bat
 ```
+
+### 3. Create Windows Installer
+
+1. Open `install.iss` with **Inno Setup Compiler**.
+2. Press `Ctrl + F9` or click **Build > Compile**.
+3. The setup file `TestPassword-Setup.exe` will be generated in the root directory.
 
 ## Usage
 
