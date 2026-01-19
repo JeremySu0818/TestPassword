@@ -19,7 +19,7 @@ def run_computation_core(str target_identity):
     cdef int is_resolved = 0
     cdef int i
     cdef int keep_running = 1
-    cdef int monitor_counter = 1000000
+    cdef int monitor_counter = 1000000000
 
     cdef int* indices = <int*>malloc(seq_len * sizeof(int))
     cdef char* current_candidate = <char*>malloc((seq_len + 1) * sizeof(char))
@@ -34,8 +34,6 @@ def run_computation_core(str target_identity):
     current_candidate[seq_len] = 0
 
     start_point = time.time()
-
-    printf("TestingCore: Deploying computational kernel (Optimized C-Path)...\n")
 
     with nogil:
         while keep_running:
@@ -64,8 +62,8 @@ def run_computation_core(str target_identity):
             
             monitor_counter -= 1
             if monitor_counter == 0:
-                printf("Kernel Monitor: %lld cycles completed...\n", total_cycles)
-                monitor_counter = 10000000
+                printf("%lld cycles completed...\n", total_cycles)
+                monitor_counter = 1000000000
 
     end_point = time.time()
     execution_latency = end_point - start_point
