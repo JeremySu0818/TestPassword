@@ -7,9 +7,12 @@ def main():
     while True:
         target_input = input("Target Identity: ")
         if not target_input:
+            print(">> ERROR: Invalid newline or empty input.")
             continue
         if all(char in sequence_pool for char in target_input):
             break
+        else:
+            print(">> ERROR: Unsupported password string or invalid characters.")
 
     success, cycles, latency = run_computation_core(target_input)
 
