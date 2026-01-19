@@ -30,6 +30,8 @@ TestingCore.html
 # Usually .spec files are kept if they are customized, but can be ignored if generated
 # *.spec
 *.manifest
+*.spec
+*.exe
 
 # === Environments ===
 .env
